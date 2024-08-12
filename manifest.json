@@ -1,0 +1,62 @@
+{
+  "name": "AfiHunt AI",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "An AI tool to passively hunt for affiliate programs whilst you browse",
+  "icons": {
+    "16": "./src/icons/icon-16.png",
+    "128": "./src/icons/icon-128.png"
+  },
+  "default_locale": "en",
+  
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications",
+    "scripting"
+  ],
+  "options_ui": {
+    "page": "./src/options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "./src/scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  
+  "action": {
+    "default_icon": {
+      "19": "./src/icons/icon-19.png",
+      "38": "./src/icons/icon-38.png"
+    },
+    "default_title": "AfiHunter AI",
+    "default_popup": "./src/popup.html"
+  },
+  "web_accessible_resources": [{ 
+    "resources":["./src/scripts/utils/ext.js", 
+     "./src/scripts/utils/storage.js", "./src/scripts/toastr.min.js",
+     "./src/styles/toastr.min.css", "./src/styles/customNoti.min.css",
+     "./src/styles/customNoti.min.css","./src/sounds/mixkit-bubble-pop-up-alert-notification-2357.wav",
+    "./src/sounds/mixkit-dry-pop-up-notification-alert-2356.wav"],
+    "matches": ["<all_urls>"]
+    }]
+}
+
+

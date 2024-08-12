@@ -1,0 +1,20 @@
+{
+  "name": "afi_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/vertexai": "^1.4.0",
+    "@google/generative-ai": "^0.15.0",
+    "afi_backend": "file:",
+    "axios": "^1.7.2",
+    "firebase": "^10.12.3",
+    "flutterwave-node-v3": "^1.1.10",
+    "node-mailjet": "^6.0.5"
+  }
+}

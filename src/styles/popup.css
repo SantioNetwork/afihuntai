@@ -1,0 +1,103 @@
+@import "./modules/_reset.css";
+@import "./modules/_variables.css";
+@import "./modules/_layout.css";
+
+body, html {
+  padding: 0;
+  margin: 0;
+  border-radius: 35px;
+  border: 35px;
+  background: none;
+}
+
+#app {
+  padding: 20px 20px;
+  background: var(--white);
+  border-radius: 35px;
+}
+
+footer {
+  color: var(--text-secondary);
+  text-align: right;
+  font-size: 0.8em;
+  a {
+    outline: none;
+    color: lighten(var(--text-secondary), 10%);
+    &:hover {
+      color: var(--text-secondary);
+    }
+  }
+}
+
+.popup-content {
+  border-radius: 25px;
+  min-width: 220px;
+  min-height: 100px;
+  max-width: 350px;
+}
+
+.app-name {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #03021b;
+  text-align: center;
+  margin: 0 auto 1em auto;
+  padding: 0;
+}
+
+.site-description {
+  padding: 0.5em;
+  border: 1px solid var(--gray);
+  margin: 0;
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 0.5em;
+  }
+
+  .description {
+    color: var(--text-secondary);
+    max-height: 100px;
+    font-size: 0.8em;
+    line-height: 1.2;
+  }
+
+  .url {
+    outline: none;
+    text-decoration: none;
+    line-height: 1.2;
+    font-size: 0.8em;
+    word-break: break-word;
+    display: block;
+  }
+}
+
+.action-container {
+  margin: 1em auto;
+}
+
+.descp {
+  border-radius: 5px;
+  background-color: rgb(252, 252, 252);
+}
+.top-bar {
+  min-height: 20px;
+  background-color: rgb(79, 146, 221);
+  display: flex;
+}
+.btn {
+  background: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  background: var(--brand-primary);
+  color: var(--white);
+  font-weight: var(--headings-font-weight);
+  border-radius: 6px;
+  outline: none;
+  font-size: 1em;
+}
+
